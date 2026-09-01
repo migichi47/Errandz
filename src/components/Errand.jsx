@@ -31,8 +31,8 @@ export function Errand({ name, price, description, destination, time }) {
           </div>
         </div>
       </div>
-      <button className="button py-2 cursor-pointer text-white font-semibold text-xl">
-        View Details <BsArrowRight />
+      <button className="button py-2 cursor-pointer group hover:text-black/80 transition-colors text-white font-semibold text-xl hover:bg-primary/80 ">
+        <span>View Details</span> <BsArrowRight className="group-hover:scale-x-120" />
       </button>
     </div>
   );

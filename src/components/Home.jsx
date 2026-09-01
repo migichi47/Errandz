@@ -1,33 +1,7 @@
 import { BiSearch } from "react-icons/bi";
 import { FiFilter } from "react-icons/fi";
 import { Errand } from "./Errand";
-
-const errands = [
-  {
-    name: "Get Laundry",
-    price: 20,
-    description:
-      " Need someone to pick up my clothes from main street. I have already paid for the laundry fee",
-    destination: "Katoloni",
-    time: "2 hrs",
-  },
-  {
-    name: "Coffee Run",
-    price: 30,
-    description:
-      "Stuck in the library studying for finals. I desperately need a large iced latte from the cafeteria at Kathayoni",
-    destination: "Kathayoni",
-    time: "1 hr",
-  },
-  {
-    name: "Print Notes",
-    price: 50,
-    description:
-      "Printer is broken in my hall. Need 50 pages of notes printed in color and",
-    destination: "Machakos University",
-    time: "8 hrs",
-  },
-];
+import { errands } from "./errands";
 
 export function Home() {
   return (
@@ -40,7 +14,6 @@ export function Home() {
           placeholder="Find an errand (e.g. coffee, laundry)"
         />
       </div>
-
       <div className="flex mt-5 justify-between items-center">
         <h1 className="font-bold text-2xl">Available Errands</h1>
         <div className="text-secondary flex items-center gap-0.5 font-semibold">
@@ -48,7 +21,6 @@ export function Home() {
           <FiFilter />
         </div>
       </div>
-
       <div className="h-full">
         {errands.map((errand) => (
           <Errand
