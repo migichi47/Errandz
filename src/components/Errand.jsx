@@ -1,9 +1,15 @@
+import { useContext } from "react";
 import { BsArrowRight, BsClock } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
+import { AppContext } from "../context/AppContext";
+import { useNavigate } from "react-router-dom";
 
-export function Errand({ name, price, description, destination, time }) {
+export function Errand({ id, name, price, description, destination, time }) {
+  const { pickedErrandId, setPickedErrandId } = useContext(AppContext);
+  const navigate = useNavigate();
+
   return (
-    <div className="flex flex-col gap-3 mt-5 bg-gray-100 p-4">
+    <div className="flex flex-col gap-3 mt-5 tile p-4">
       <div className="flex gap-3">
         <img
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCizjI01qxHM2GVqNDZDZ7CVFFIJQnK2v97h_vT5sYun6ih7K57FhfT6sjEI9Z9oXNpO5jo5pgoB883hLJ0z7wEPYzdKd5OxYDV1LvtlBlwMJC3ISuXturWdVjRov2IqIwrgjE09G2Wjejn8RFNOGko6G33jbFmpKZBGx93i8OiUfyNerR7bnpuAkDL3yyLIjPE272qE585u1YxyzpEVWyOihZh4MbF-uKKfzL51hFpHX4E2ARCkDe6"
@@ -31,8 +37,15 @@ export function Errand({ name, price, description, destination, time }) {
           </div>
         </div>
       </div>
-      <button className="button py-2 cursor-pointer group hover:text-black/80 transition-colors text-white font-semibold text-xl hover:bg-primary/80 ">
-        <span>View Details</span> <BsArrowRight className="group-hover:scale-x-120" />
+      <button
+        onClick={() => {
+          setPickedErrandId(id);
+          navigate("/details");
+        }}
+        className="button py-2 cursor-pointer group hover:text-black/80 transition-colors text-white font-semibold text-xl hover:bg-primary/80 "
+      >
+        <span>View Details</span>
+        <BsArrowRight className="group-hover:scale-x-120" />
       </button>
     </div>
   );

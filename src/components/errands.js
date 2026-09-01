@@ -1,5 +1,6 @@
 export const errands = [
   {
+    id: 1,
     name: "Get Laundry",
     price: 20,
     description:
@@ -8,6 +9,7 @@ export const errands = [
     time: "2 hrs",
   },
   {
+    id: 2,
     name: "Coffee Run",
     price: 30,
     description:
@@ -16,6 +18,25 @@ export const errands = [
     time: "1 hr",
   },
   {
+    id: 3,
+    name: "Print Notes",
+    price: 50,
+    description:
+      "Printer is broken in my hall. Need 50 pages of notes printed in color and",
+    destination: "Machakos University",
+    time: "8 hrs",
+  },
+  {
+    id: 4,
+    name: "Print Notes",
+    price: 50,
+    description:
+      "Printer is broken in my hall. Need 50 pages of notes printed in color and",
+    destination: "Machakos University",
+    time: "8 hrs",
+  },
+  {
+    id: 5,
     name: "Print Notes",
     price: 50,
     description:

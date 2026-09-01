@@ -5,7 +5,7 @@ import { errands } from "./errands";
 
 export function Home() {
   return (
-    <div className="h-185 overflow-scroll">
+    <div className="">
       <div className="bg-gray-200 flex items-center h-10 rounded-full">
         <BiSearch className="w-10" />
         <input
@@ -24,6 +24,8 @@ export function Home() {
       <div className="h-full">
         {errands.map((errand) => (
           <Errand
+            key={errand.id}
+            id={errand.id}
             name={errand.name}
             price={errand.price}
             description={errand.description}

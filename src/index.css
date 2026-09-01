@@ -17,6 +17,9 @@ body {
   .button {
     @apply bg-primary rounded-sm flex justify-center items-center gap-2
   }
+  .tile {
+    @apply bg-gray-100 rounded-lg
+  }
 }
 
 /* Hide scrollbar but keep scrolling */
