@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #FF5C00;
+  --color-secondary: #0057FF;
+  --color-tertiary: #10B981;
+  --color-neutral: #111827;
+}
+
+
+body {
+  max-width: 380px;
+  margin: 0 auto;
+}
