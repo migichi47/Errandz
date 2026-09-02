@@ -10,7 +10,7 @@ export function Home() {
         <BiSearch className="w-10" />
         <input
           type="text"
-          className="w-full outline-0"
+          className="w-full outline-0 bg-none"
           placeholder="Find an errand (e.g. coffee, laundry)"
         />
       </div>
