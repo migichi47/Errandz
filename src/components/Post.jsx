@@ -20,14 +20,18 @@ export function Post() {
         </div>
         <div className="flex flex-col gap-1">
           <label>Errand Title</label>
-          <input type="text" placeholder="eg., Get Laundry" className="py-3" />
+          <input
+            className="bg-secondary/10 py-3"
+            type="text"
+            placeholder="eg., Get Laundry"
+          />
         </div>
         <div className="flex flex-col gap-1">
-          <label>Descripton</label>
+          <label>Description</label>
           <input
+            className="bg-secondary/10 h-20"
             type="text"
             placeholder="Take my laundry to Kimaa's Laundry store in cp"
-            className="h-20"
           />
         </div>
       </div>
@@ -57,10 +61,12 @@ export function Post() {
           <h3>Compensation</h3>
         </div>
         <label>Price / Budget</label>
-        <input type="text" placeholder="ksh.90" className="py-3"/>
+        <input className="bg-secondary/10 py-3" type="text" placeholder="ksh.90" />
       </div>
 
-      <Button className="text-white text-lg font-bold w-full py-3">Post errand</Button>
+      <Button className="text-white text-lg font-bold w-full py-3">
+        Post errand
+      </Button>
     </div>
   );
 }

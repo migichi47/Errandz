@@ -14,7 +14,7 @@ body {
 }
 
 input {
-  @apply bg-secondary/10 rounded-lg px-5 outline-0
+  @apply rounded-lg px-5 outline-0
 }
 
 select {
