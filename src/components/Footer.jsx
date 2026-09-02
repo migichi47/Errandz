@@ -10,22 +10,33 @@ export function Footer() {
   return (
     <div className="mt-2 absolute w-full bottom-2 flex justify-center gap-10 [&>button]:border [&>button]:border-black/20 [&>button]:rounded-full [&>button]:flex [&>button]:flex-col [&>button]:p-2 [&>button]:w-15 [&>button]:justify-center [&>button]:items-center">
       <button
-        className={`${location.pathname === "/" && "bg-primary"} group`}
+        className={`${location.pathname === "/" ? "bg-primary" : "hover:bg-secondary/20 transition-colors"} group `}
         onClick={() => navigate("/")}
       >
-        <SiBuzzfeed className="group-hover:" /> <span>Feed</span>
+        <SiBuzzfeed
+          className={location.pathname !== "/" && "group-hover:scale-120"}
+        />
+        <span>Feed</span>
       </button>
       <button
         onClick={() => navigate("/post")}
-        className={`${location.pathname.startsWith("/post") && "bg-primary"} group`}
+        className={`${location.pathname.startsWith("/post") ? "bg-primary" : "hover:bg-secondary/20 transition-colors"} group `}
       >
-        <CiCirclePlus />
+        <CiCirclePlus
+          className={
+            !location.pathname.startsWith("/post") && "group-hover:scale-120"
+          }
+        />
         <span>Post</span>
       </button>
       <button
-        className={`${location.pathname.startsWith("/profile") && "bg-primary"} group`}
+        className={`${location.pathname.startsWith("/profile") ? "bg-primary" : "hover:bg-secondary/20 transition-colors"} group `}
       >
-        <FaRegUser />
+        <FaRegUser
+          className={
+            !location.pathname.startsWith("/profile") && "group-hover:scale-120"
+          }
+        />
         <span>Profile</span>
       </button>
     </div>

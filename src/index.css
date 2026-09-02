@@ -18,7 +18,7 @@ input {
 }
 
 select {
-  @apply bg-secondary/10 rounded-lg px-5 py-3 outline-0 appearance-none
+  @apply bg-secondary/10 rounded-lg px-5 py-3 outline-0 appearance-none cursor-pointer
 }
 
 @layer components {
