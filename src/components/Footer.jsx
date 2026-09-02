@@ -14,7 +14,7 @@ export function Footer() {
         onClick={() => navigate("/")}
       >
         <SiBuzzfeed
-          className={location.pathname !== "/" && "group-hover:scale-120"}
+          className={location.pathname !== "/" && "group-hover:scale-120 duration-75"}
         />
         <span>Feed</span>
       </button>
@@ -24,7 +24,7 @@ export function Footer() {
       >
         <CiCirclePlus
           className={
-            !location.pathname.startsWith("/post") && "group-hover:scale-120"
+            !location.pathname.startsWith("/post") && "group-hover:scale-120 duration-75"
           }
         />
         <span>Post</span>
@@ -34,7 +34,7 @@ export function Footer() {
       >
         <FaRegUser
           className={
-            !location.pathname.startsWith("/profile") && "group-hover:scale-120"
+            !location.pathname.startsWith("/profile") && "group-hover:scale-120 duration-75"
           }
         />
         <span>Profile</span>
