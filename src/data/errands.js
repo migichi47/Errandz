@@ -8,7 +8,7 @@ export const errands = [
     destination: "Katoloni",
     time: "2 hrs",
     from: "CP",
-    status: "pending",
+    status: "taken",
     ownerId: 1,
   },
   {
@@ -32,7 +32,7 @@ export const errands = [
     destination: "Machakos University",
     time: "8 hrs",
     from: "Diaspora",
-    status: "completed",
+    status: "taken",
     ownerId: 3,
   },
   {
@@ -56,8 +56,7 @@ export const errands = [
     destination: "Machakos University",
     time: "8 hrs",
     from: "CP",
-    status: "pending",
+    status: "taken",
     ownerId: 5,
   },
 ];
-

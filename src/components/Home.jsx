@@ -1,7 +1,7 @@
 import { BiSearch } from "react-icons/bi";
 import { FiFilter } from "react-icons/fi";
 import { Errand } from "./Errand";
-import { errands } from "./errands";
+import { errands } from "../data/errands";
 
 export function Home() {
   return (

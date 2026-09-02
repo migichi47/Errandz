@@ -4,13 +4,14 @@ import { FaRegMessage } from "react-icons/fa6";
 import { MdPending } from "react-icons/md";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import { errands } from "./errands";
-import { users } from "./users";
+import { errands } from "../data/errands";
+import { users } from "../data/users";
+import { TiTick } from "react-icons/ti";
 
 export function Details() {
   const { pickedErrandId, setPickedErrandId } = useContext(AppContext);
   const errand = errands.find((errand) => errand.id === pickedErrandId);
-  const user = users.find((user) => user.id === errand?.ownerId);
+  const owner = users.find((user) => user.id === errand?.ownerId);
 
   return (
     <div className="space-y-5">
@@ -25,18 +26,24 @@ export function Details() {
           </div>
         </div>
         <div className="space-y-2">
-          <div className="bg-primary/20 rounded-2xl flex w-fit gap-2 items-center px-3 py-1 text-xs">
-            <MdPending />
+          <div
+            className={`${errand?.status === "pending" ? "bg-primary/20" : "bg-green-500/40"}  rounded-2xl flex w-fit gap-2 items-center px-3 py-1 text-xs`}
+          >
+            {errand?.status === "pending" ? (
+              <MdPending />
+            ) : (
+              <TiTick className="text-lg" />
+            )}
             <span>
-              {errand?.status === "pending"
-                ? "Pending Acceptance"
-                : "Completed"}
+              {errand?.status === "pending" ? "Pending Acceptance" : "Taken"}
             </span>
           </div>
-          <div className="bg-secondary/10 rounded-2xl flex w-fit gap-2 items-center px-3 py-1 text-xs">
-            <BsClock />
-            <span>Due Today, 6:00 PM</span>
-          </div>
+          {errand?.status === "pending" && (
+            <div className="bg-secondary/10 rounded-2xl flex w-fit gap-2 items-center px-3 py-1 text-xs">
+              <BsClock />
+              <span>Due Today, 6:00 PM</span>
+            </div>
+          )}
         </div>
       </div>
 
@@ -50,13 +57,9 @@ export function Details() {
       <div className="space-y-2">
         <h2 className="font-semibold">Requested By,</h2>
         <div className="tile py-3 px-5 flex justify-between items-center">
-          <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAygh0YqwnpPWGNmbJQfZcwzVsMYdQFUtbHUg1c5I7u0fiPujCpDXYoAKP4kTGIcQnVZEqSPrkzL5itbO-lZy_nvszGs2Tc_UGZajE45mEfMzNT8BDgGlor_uQms0v1hXi09cV3OfCRmZQ0ImKaKh2gz90Gpz4IIxgrZ0aRgsARNW9Ai_-UXMf2IowGxedjB9dbtbxLaiNReopvfpHueW3xEGB0y0f6TZcsjAxoBayQPeGSJmxfnQEu"
-            alt=""
-            className="w-12 h-12 rounded-full"
-          />
+          <img src={owner.image} alt="" className="w-12 h-12 rounded-full" />
           <div className="flex flex-col">
-            <h3 className="font-semibold">{user.name}</h3>
+            <h3 className="font-semibold">{owner.name}</h3>
             <div className="flex justify-between gap-2 items-center">
               <div className="text-primary/80 gap-1 flex items-center">
                 <FaStar className="text-xs" /> <span>4.8</span>
