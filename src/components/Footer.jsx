@@ -11,7 +11,7 @@ export function Footer() {
       <button className="group" onClick={() => navigate("/")}>
         <SiBuzzfeed className="group-hover:" /> <span>Feed</span>
       </button>
-      <button>
+      <button  onClick={() => navigate("/post")}>
         <CiCirclePlus />
         <span>Post</span>
       </button>
