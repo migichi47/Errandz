@@ -7,6 +7,9 @@ export const errands = [
       "Hey! I'm stuck in the library cramming for finals and really need some help. I need someone to grab my laundry and also drop off a small Amazon return package for me.",
     destination: "Katoloni",
     time: "2 hrs",
+    from: "CP",
+    status: "pending",
+    ownerId: 1,
   },
   {
     id: 2,
@@ -16,6 +19,9 @@ export const errands = [
       "Stuck in the library studying for finals. I desperately need a large iced latte from the cafeteria at Kathayoni",
     destination: "Kathayoni",
     time: "1 hr",
+    from: "Town",
+    status: "pending",
+    ownerId: 2,
   },
   {
     id: 3,
@@ -25,6 +31,9 @@ export const errands = [
       "Printer is broken in my hall. Need 50 pages of notes printed in color and",
     destination: "Machakos University",
     time: "8 hrs",
+    from: "Diaspora",
+    status: "completed",
+    ownerId: 3,
   },
   {
     id: 4,
@@ -34,6 +43,9 @@ export const errands = [
       "Printer is broken in my hall. Need 50 pages of notes printed in color and",
     destination: "Machakos University",
     time: "8 hrs",
+    from: "Machakos University",
+    status: "pending",
+    ownerId: 4,
   },
   {
     id: 5,
@@ -43,5 +55,9 @@ export const errands = [
       "Printer is broken in my hall. Need 50 pages of notes printed in color and",
     destination: "Machakos University",
     time: "8 hrs",
+    from: "CP",
+    status: "pending",
+    ownerId: 5,
   },
 ];
+

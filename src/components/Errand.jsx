@@ -4,7 +4,17 @@ import { CiLocationOn } from "react-icons/ci";
 import { AppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
 
-export function Errand({ id, name, price, description, destination, time }) {
+export function Errand({
+  id,
+  name,
+  price,
+  description,
+  destination,
+  time,
+  from,
+  status,
+  ownerId,
+}) {
   const { pickedErrandId, setPickedErrandId } = useContext(AppContext);
   const navigate = useNavigate();
 
@@ -24,7 +34,7 @@ export function Errand({ id, name, price, description, destination, time }) {
               <span>{price}</span>
             </div>
           </div>
-          <p className="text-gray-600 text-xs">{description}</p>
+          <p className="text-gray-600 text-sm">{description}</p>
           <div className="flex gap-4 items-center">
             <div className="flex gap-1">
               <CiLocationOn className="text-lg" />

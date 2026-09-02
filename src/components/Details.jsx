@@ -4,27 +4,34 @@ import { FaRegMessage } from "react-icons/fa6";
 import { MdPending } from "react-icons/md";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import { errands } from "./errands";
+import { users } from "./users";
 
 export function Details() {
   const { pickedErrandId, setPickedErrandId } = useContext(AppContext);
-  
+  const errand = errands.find((errand) => errand.id === pickedErrandId);
+  const user = users.find((user) => user.id === errand?.ownerId);
 
   return (
     <div className="space-y-5">
       <div className="space-y-4 py-3 px-5 tile">
         <div className="flex justify-between">
-          <h1 className="font-semibold text-2xl w-55">
-            Pick up dry cleaning & drop off small packages
-          </h1>
+          <h1 className="font-semibold text-2xl w-55">{errand?.name}</h1>
           <div className="flex flex-col items-end">
-            <span className="text-secondary font-semibold">ksh.50</span>
+            <span className="text-secondary font-semibold">
+              ksh.{errand?.price}
+            </span>
             <span className="text-sm font-light">Est. PAYOUT</span>
           </div>
         </div>
         <div className="space-y-2">
           <div className="bg-primary/20 rounded-2xl flex w-fit gap-2 items-center px-3 py-1 text-xs">
             <MdPending />
-            <span>Pending Acceptance</span>
+            <span>
+              {errand?.status === "pending"
+                ? "Pending Acceptance"
+                : "Completed"}
+            </span>
           </div>
           <div className="bg-secondary/10 rounded-2xl flex w-fit gap-2 items-center px-3 py-1 text-xs">
             <BsClock />
@@ -36,11 +43,7 @@ export function Details() {
       <div>
         <h2 className="font-semibold">Task Overview</h2>
         <div className="tile px-5 py-3">
-          <p>
-            Hey! I'm stuck in the library cramming for finals and really need
-            some help. I need someone to grab my laundry and also drop off a
-            small Amazon return package for me.
-          </p>
+          <p>{errand?.description}</p>
         </div>
       </div>
 
@@ -53,7 +56,7 @@ export function Details() {
             className="w-12 h-12 rounded-full"
           />
           <div className="flex flex-col">
-            <h3 className="font-semibold">Alex M.</h3>
+            <h3 className="font-semibold">{user.name}</h3>
             <div className="flex justify-between gap-2 items-center">
               <div className="text-primary/80 gap-1 flex items-center">
                 <FaStar className="text-xs" /> <span>4.8</span>

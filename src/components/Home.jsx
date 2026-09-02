@@ -31,6 +31,9 @@ export function Home() {
             description={errand.description}
             destination={errand.destination}
             time={errand.time}
+            from={errand.from}
+            status={errand.status}
+            ownerId={errand.ownerId}
           />
         ))}
       </div>
