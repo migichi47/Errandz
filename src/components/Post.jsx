@@ -1,6 +1,7 @@
 import { CgDetailsMore } from "react-icons/cg";
 import { CiLocationOn } from "react-icons/ci";
 import { FaMoneyBills } from "react-icons/fa6";
+import { Button } from "./Button";
 
 export function Post() {
   return (
@@ -59,7 +60,7 @@ export function Post() {
         <input type="text" placeholder="ksh.90" className="py-3"/>
       </div>
 
-      <button className="button text-white text-lg font-bold w-full py-3">Post errand</button>
+      <Button className="text-white text-lg font-bold w-full py-3">Post errand</Button>
     </div>
   );
 }

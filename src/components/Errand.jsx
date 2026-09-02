@@ -4,6 +4,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { AppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
 import { users } from "../data/users";
+import { Button } from "./Button";
 
 export function Errand({
   id,
@@ -45,16 +46,16 @@ export function Errand({
           </div>
         </div>
       </div>
-      <button
+      <Button
         onClick={() => {
           setPickedErrandId(id);
           navigate("/details");
         }}
-        className="button py-2 cursor-pointer group hover:text-black/80 transition-colors text-white font-semibold text-xl hover:bg-primary/80 "
+        className="py-2 group"
       >
         <span>View Details</span>
         <BsArrowRight className="group-hover:scale-x-120" />
-      </button>
+      </Button>
     </div>
   );
 }
