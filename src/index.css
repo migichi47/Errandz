@@ -8,11 +8,6 @@
 }
 
 
-body {
-  max-width: 430px;
-  margin: 0 auto;
-}
-
 input {
   @apply rounded-lg px-5 outline-0
 }

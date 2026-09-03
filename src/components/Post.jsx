@@ -64,7 +64,7 @@ export function Post() {
         <input className="bg-secondary/10 py-3" type="text" placeholder="ksh.90" />
       </div>
 
-      <Button className="text-white text-lg font-bold w-full py-3">
+      <Button className="text-white text-lg font-bold py-3">
         Post errand
       </Button>
     </div>

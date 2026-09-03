@@ -13,11 +13,9 @@ export function Errand({
   description,
   destination,
   time,
-  from,
-  status,
   ownerId,
 }) {
-  const { pickedErrandId, setPickedErrandId } = useContext(AppContext);
+  const {  setPickedErrandId } = useContext(AppContext);
   const navigate = useNavigate();
   const owner = users.find((user) => user.id === ownerId);
 
@@ -25,7 +23,7 @@ export function Errand({
     <div className="flex flex-col gap-3 mt-5 tile p-4">
       <div className="flex gap-3">
         <img src={owner.image} alt="image" className="w-10 h-10 rounded-full" />
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 w-full">
           <div className="flex justify-between">
             <h2 className="font-semibold text-xl">{name}</h2>
             <div className="text-lg text-tertiary font-semibold">

@@ -5,8 +5,8 @@ import { errands } from "../data/errands";
 
 export function Home() {
   return (
-    <div className="">
-      <div className="bg-gray-200 flex items-center h-10 rounded-full">
+    <div className="flex flex-col items-center">
+      <div className="bg-gray-200 flex w-full items-center h-10 rounded-full max-w-100 sm:max-w-150 ">
         <BiSearch className="w-10" />
         <input
           type="text"
@@ -14,14 +14,14 @@ export function Home() {
           placeholder="Find an errand (e.g. coffee, laundry)"
         />
       </div>
-      <div className="flex mt-5 justify-between items-center">
+      <div className="flex mt-5 justify-between items-center w-[90%]">
         <h1 className="font-bold text-2xl">Available Errands</h1>
-        <div className="text-secondary flex items-center gap-0.5 font-semibold">
+        <div className="text-secondary flex items-center gap-0.5 font-semibold cursor-pointer hover:bg-secondary transition-colors px-2 py-1 hover:text-white rounded-full">
           <span>Sort</span>
           <FiFilter />
         </div>
       </div>
-      <div className="h-full">
+      <div className="h-full lg:grid lg:grid-cols-2 lg:gap-4">
         {errands.map((errand) => (
           <Errand
             key={errand.id}

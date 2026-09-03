@@ -53,21 +53,21 @@ export function Profile() {
         </div>
       </div>
 
-      <div className="tile px-5 py-3 space-y-2">
-        <div className="flex justify-between">
+      <div className="tile px-5 py-3 space-y-2 flex flex-col items-center">
+        <div className="flex justify-between w-full">
           <span className="bg-primary/20 px-2 rounded-full text-primary/90">
             pending
           </span>
           <span className="text-secondary font-semibold">ksh. 90</span>
         </div>
-        <h2 className="font-semibold text-xl">Deliver Lab Report</h2>
-        <div className="flex items-center gap-1">
+        <h2 className="font-semibold text-xl w-full">Deliver Lab Report</h2>
+        <div className="flex items-center gap-1 w-full">
           <CiLocationOn />
           <h3>Main Campus Library</h3>
         </div>
-        <hr className="text-gray-300" />
-        <h3 className="font-light text-sm">STATUS</h3>
-        <div className="bg-secondary/10 p-3 rounded-lg flex gap-4 items-center">
+        <hr className="text-gray-300 w-full" />
+        <h3 className="font-light text-sm w-full">STATUS</h3>
+        <div className="bg-secondary/10 p-3 rounded-lg flex gap-4 items-center w-full">
           <div className="bg-secondary/20 rounded-full p-3 h-fit flex justify-between items-center">
             <GiSandsOfTime />
           </div>
@@ -76,7 +76,7 @@ export function Profile() {
             <p className="text-gray-500">Your errand is visible to the community.</p>
           </div>
         </div>
-        <button className="border border-gray-400 py-2 font-semibold w-full rounded-lg">Edit Erand</button>
+        <button className="border border-gray-400 py-2 w-fit font-semibold rounded-lg px-5">Edit Erand</button>
       </div>
     </div>
   );

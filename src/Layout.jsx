@@ -4,9 +4,9 @@ import { Footer } from "./components/Footer";
 
 export function Layout() {
   return (
-    <div className="mx-auto relative mt-20 rounded-4xl border-10 border-black/30 h-[84vh]">
+    <div className="relative h-screen">
       <Header />
-      <main className="pt-17 h-208 overflow-scroll px-3">
+      <main className="pt-17 h-screen overflow-scroll px-3 max-w-300 mx-auto">
         <Outlet />
       </main>
       <Footer />

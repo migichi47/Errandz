@@ -8,7 +8,7 @@ export function Footer() {
   const location = useLocation();
 
   return (
-    <div className="mt-2 absolute w-full bottom-2 flex justify-center gap-10 [&>button]:border [&>button]:border-black/20 [&>button]:rounded-full [&>button]:flex [&>button]:flex-col [&>button]:p-2 [&>button]:w-15 [&>button]:justify-center [&>button]:items-center">
+    <div className="mt-2 backdrop-blur-2xl absolute w-full bottom-0 py-2 flex justify-center gap-10 [&>button]:border [&>button]:border-black/20 [&>button]:rounded-full [&>button]:flex [&>button]:flex-col [&>button]:p-2 [&>button]:w-15 [&>button]:justify-center [&>button]:items-center">
       <button
         className={`${location.pathname === "/" ? "bg-primary" : "hover:bg-secondary/20 transition-colors"} group `}
         onClick={() => navigate("/")}
